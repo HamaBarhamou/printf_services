@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'printf_services_manager.apps.PrintfServicesManagerConfig',
 ]
 
 MIDDLEWARE = [
@@ -50,11 +51,12 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'printf_services.urls'
+BASE_TEMPLATE_PATH = str(BASE_DIR) + '/printf_services/templates'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_TEMPLATE_PATH],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -121,3 +123,8 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_URL = '/stock_management_api/media/'
+STATIC_ROOT = BASE_DIR / 'static'
+STATIC_URL = '/static/'

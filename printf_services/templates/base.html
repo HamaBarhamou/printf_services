@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %} {% endblock %}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .navbar {
+            background-color: #005596;
+        }
+        .navbar-brand {
+            color: white !important;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+        .navbar-nav .nav-item .nav-link {
+            color: white !important;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        .breadcrumb {
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        .breadcrumb-item {
+            font-weight: bold;
+        }
+        .stock-card {
+            transition: background-color 0.5s;
+        }
+        .stock-card:hover {
+            background-color: #ddd;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <a class="navbar-brand" href="{% url 'manager:accueil' %}">Accueil</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Produits/Services</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Blog/Actualités</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">À propos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contact</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">FAQ</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Politique de confidentialité</a>
+      </li>
+
+      {% if user.is_authenticated %}
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            {{ user.username }}
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#">Profile</a>
+            <a class="dropdown-item" href="#">Change password</a>
+            <a class="dropdown-item" href="#">Logout</a>
+          </div>
+        </li>
+      {% else %}
+        <li class="nav-item">
+          <a class="nav-link" href="#">Connexion</a>
+        </li>
+      {% endif %}
+
+
+    </ul>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  
+    {% block content %}{% endblock %}
+</div>
+<footer class="bg-primary text-white py-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h3>Contactez-nous</h3>
+        <p>Niamey/Niger</p>
+        <p>Téléphone : (+227) 97 55 78 52 / 98 88 20 48</p>
+        <p>Email : hamabarhamou@gmail.com</p>
+      </div>
+      <div class="col-md-6">
+        <h3>Suivez-nous</h3>
+        <p>Retrouvez-nous sur les réseaux sociaux :</p>
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="#"><i class="fab fa-facebook fa-2x"></i></a></li>
+          <li class="list-inline-item"><a href="#"><i class="fab fa-twitter fa-2x"></i></a></li>
+          <li class="list-inline-item"><a href="#"><i class="fab fa-instagram fa-2x"></i></a></li>
+        </ul>
+      </div>
+      <p>&copy; 2023 PrintF Service. Tous droits réservés.</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

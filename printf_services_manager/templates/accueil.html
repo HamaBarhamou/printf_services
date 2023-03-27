@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="jumbotron" style="background-image: url('{% static 'images/im.jpg' %}'); background-size: cover;">
+  <div class="container">
+    <h1>Bienvenue sur notre site !</h1>
+    <p>Nous proposons des prestations de service et de placement d'enseignants pour des cours à domicile dans toutes les matières.</p>
+    <p>Nos services sont adaptés à tous les niveaux et pour tous les âges.</p>
+  </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="{% static 'images/images1.png' %}" class="img-responsive" alt="Développement de solutions numériques">
+            <h2>Développement de solutions numériques</h2>
+            <p>Nous sommes spécialisés dans la conception et la réalisation de solutions numériques innovantes pour répondre aux besoins de nos clients. Nous mettons notre expertise au service de votre réussite.</p>
+            <p><a class="btn btn-primary" href="#" role="button">En savoir plus &raquo;</a></p>
+        </div>
+        <div class="col-md-6">
+            <img src="{% static 'images/images2.png' %}" class="img-responsive" alt="Cours particuliers">
+            <h2>Cours particuliers</h2>
+            <p>Nous offrons des cours particuliers dans toutes les matières, de la primaire au supérieur. Nos enseignants sont expérimentés et passionnés par leur métier.</p>
+            <p><a class="btn btn-default" href="#" role="button">En savoir plus &raquo;</a></p>
+        </div>
+        <div class="col-md-6">
+            <img src="{% static 'images/images2.png' %}" class="img-responsive" alt="Prestations de services">
+            <h2>Prestations de services</h2>
+            <p>Nous proposons également des prestations de service pour vous accompagner dans toutes vos tâches du quotidien, que ce soit du ménage, du jardinage ou encore de la garde d'enfants.</p>
+            <p><a class="btn btn-default" href="#" role="button">En savoir plus &raquo;</a></p>
+        </div>
+        <div class="col-md-6">
+            <img src="{% static 'images/images1.png' %}" class="img-responsive" alt="Autres services">
+            <h2>Autres services</h2>
+            <p>Nous offrons également d'autres services tels que la traduction, la rédaction, la correction de textes, etc. N'hésitez pas à nous contacter pour en savoir plus.</p>
+            <p><a class="btn btn-default" href="#" role="button">En savoir plus &raquo;</a></p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
