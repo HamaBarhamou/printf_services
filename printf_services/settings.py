@@ -127,7 +127,7 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_ROOT = BASE_DIR / 'media'
-MEDIA_URL = '/stock_management_api/media/'
+MEDIA_URL = '/printf_services/media/'
 STATIC_ROOT = BASE_DIR / 'static'
 STATIC_URL = '/static/'
 
