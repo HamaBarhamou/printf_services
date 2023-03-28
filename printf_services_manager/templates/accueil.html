@@ -1,41 +1,68 @@
 {% extends "base.html" %}
 {% load static %}
-{% block content %}
-<div class="jumbotron" style="background-image: url('{% static 'images/im.jpg' %}'); background-size: cover;">
-  <div class="container">
-    <h1>Bienvenue sur notre site !</h1>
-    <p>Nous proposons des prestations de service et de placement d'enseignants pour des cours à domicile dans toutes les matières.</p>
-    <p>Nos services sont adaptés à tous les niveaux et pour tous les âges.</p>
-  </div>
-</div>
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-6">
-            <img src="{% static 'images/images1.png' %}" class="img-responsive" alt="Développement de solutions numériques">
-            <h2>Développement de solutions numériques</h2>
-            <p>Nous sommes spécialisés dans la conception et la réalisation de solutions numériques innovantes pour répondre aux besoins de nos clients. Nous mettons notre expertise au service de votre réussite.</p>
-            <p><a class="btn btn-primary" href="#" role="button">En savoir plus &raquo;</a></p>
-        </div>
-        <div class="col-md-6">
-            <img src="{% static 'images/images2.png' %}" class="img-responsive" alt="Cours particuliers">
-            <h2>Cours particuliers</h2>
-            <p>Nous offrons des cours particuliers dans toutes les matières, de la primaire au supérieur. Nos enseignants sont expérimentés et passionnés par leur métier.</p>
-            <p><a class="btn btn-default" href="#" role="button">En savoir plus &raquo;</a></p>
-        </div>
-        <div class="col-md-6">
-            <img src="{% static 'images/images2.png' %}" class="img-responsive" alt="Prestations de services">
-            <h2>Prestations de services</h2>
-            <p>Nous proposons également des prestations de service pour vous accompagner dans toutes vos tâches du quotidien, que ce soit du ménage, du jardinage ou encore de la garde d'enfants.</p>
-            <p><a class="btn btn-default" href="#" role="button">En savoir plus &raquo;</a></p>
-        </div>
-        <div class="col-md-6">
-            <img src="{% static 'images/images1.png' %}" class="img-responsive" alt="Autres services">
-            <h2>Autres services</h2>
-            <p>Nous offrons également d'autres services tels que la traduction, la rédaction, la correction de textes, etc. N'hésitez pas à nous contacter pour en savoir plus.</p>
-            <p><a class="btn btn-default" href="#" role="button">En savoir plus &raquo;</a></p>
-        </div>
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/acceuil.css' %}">
+<div class="jumbotron landing orange-text">
+    <div class="container">
+      <h1>Bienvenue chez Print Services</h1>
+      <p>Nous sommes une entreprise spécialisée dans le développement de solutions numériques innovantes, ainsi que dans la fourniture de services divers pour répondre à vos besoins quotidiens.</p>
+      <p>Nous proposons également des formations dans les domaines de la technologie, des mathématiques appliquées et de l'enseignement général.</p>
+      <p>Contactez-nous pour en savoir plus sur nos services et prestations, ou pour être mis en relation avec des prestataires de services de qualité.</p>
+      <a class="btn btn-primary btn-lg" href="#" role="button">En savoir plus</a>
     </div>
 </div>
 
+<div class="container services">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card mb-4">
+        <img src="{% static 'images/im.jpg' %}" class="card-img-top" alt="Développement de solutions numériques">
+        <div class="card-body">
+          <h5 class="card-title">Développement de solutions numériques</h5>
+          <p class="card-text">Nous concevons et réalisons des solutions numériques innovantes pour répondre aux besoins de nos clients. Notre expertise est mise à votre disposition pour votre réussite.</p>
+        </div>
+      </div>
+      <div class="card mb-4">
+        <img src="{% static 'images/im.jpg' %}" class="card-img-top" alt="Tâches bureautiques">
+        <div class="card-body">
+          <h5 class="card-title">Tâches bureautiques</h5>
+          <p class="card-text">Nous prenons en charge vos tâches administratives, pour vous permettre de vous concentrer sur votre activité principale. Nous pouvons réaliser des tâches variées, comme la rédaction de courriers, la saisie de données, la création de tableaux Excel, etc.</p>
+        </div>
+      </div>
+      <div class="card mb-4">
+        <img src="{% static 'images/im.jpg' %}" class="card-img-top" alt="Jardinage">
+        <div class="card-body">
+          <h5 class="card-title">Jardinage</h5>
+          <p class="card-text">Nous proposons des services de jardinage pour entretenir vos espaces verts et vos plantes d'intérieur. Nous pouvons réaliser des travaux variés, comme la tonte de pelouse, la taille de haies, l'arrosage de plantes, etc.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card mb-4">
+        <img src="{% static 'images/im.jpg' %}" class="card-img-top" alt="Services divers">
+        <div class="card-body">
+          <h5 class="card-title">Services divers</h5>
+          <p class="card-text">Nous offrons une gamme variée de services pour répondre à vos besoins. Que vous soyez un particulier ou une entreprise, nous pouvons vous aider dans différents domaines comme le nettoyage, la livraison de colis, le soutien scolaire, etc.</p>
+        </div>
+      </div>
+      <div class="card mb-4">
+        <img src="{% static 'images/im.jpg' %}" class="card-img-top" alt="Formations">
+        <div class="card-body">
+          <h5 class="card-title">Formations</h5>
+          <p class="card-text">Nous proposons des formations dans les domaines de la technologie, des mathématiques appliquées et de l'enseignement général. Nous pouvons vous aider à vous perfectionner dans votre domaine ou à acquérir de nouvelles compétences pour évoluer professionnellement.</p>
+        </div>
+      </div>
+      <div class="card mb-4">
+        <img src="{% static 'images/im.jpg' %}" class="card-img-top" alt="Mise en relation">
+        <div class="card-body">
+          <h5 class="card-title">Mise en relation</h5>
+          <p class="card-text">Nous mettons en relation des prestataires de services de qualité avec des clients ayant des besoins spécifiques. Nous sommes en mesure de vous recommander des professionnels compétents dans différents domaines pour répondre à vos attentes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 {% endblock %}
+

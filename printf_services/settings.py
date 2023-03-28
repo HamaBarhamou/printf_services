@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'printf_services_manager.apps.PrintfServicesManagerConfig',
+    'blog.apps.BlogConfig',
 ]
 
 MIDDLEWARE = [
