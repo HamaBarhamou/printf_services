@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'printf_services_manager.apps.PrintfServicesManagerConfig',
     'blog.apps.BlogConfig',
+    'Profile.apps.ProfileConfig',
 ]
 
 MIDDLEWARE = [
@@ -129,3 +130,5 @@ MEDIA_ROOT = BASE_DIR / 'media'
 MEDIA_URL = '/stock_management_api/media/'
 STATIC_ROOT = BASE_DIR / 'static'
 STATIC_URL = '/static/'
+
+AUTH_USER_MODEL = 'Profile.User'

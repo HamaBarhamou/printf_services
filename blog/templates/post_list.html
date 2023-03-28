@@ -1,0 +1,15 @@
+<!-- templates/blog/post_list.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Blog</h1>
+  {% for post in object_list %}
+    <div class="post">
+      <h2><a href="{% url 'blog:post_detail' post.pk %}">{{ post.title }}</a></h2>
+      <p class="date">Published {{ post.published_date }}</p>
+      <p>{{ post.body }}</p>
+    </div>
+  {% empty %}
+    <p>No posts yet.</p>
+  {% endfor %}
+{% endblock %}
